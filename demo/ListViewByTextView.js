@@ -10,7 +10,7 @@
 import React, {Component} from 'react';
 import {AppRegistry, ListView, Text, View} from 'react-native';
 
-class ListViewBasics extends Component {
+export default class ListViewByTextView extends Component {
     // Initialize the hardcoded data
     constructor(props) {
         super(props);
@@ -37,4 +37,3 @@ class ListViewBasics extends Component {
         );
     }
 }
-AppRegistry.registerComponent('AwesomeProject', () => ListViewBasics);

@@ -4,16 +4,20 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import { AppRegistry,Navigator  } from 'react-native';
+import React, {Component} from 'react';
+import {AppRegistry, Navigator} from 'react-native';
 
-import MyScene from './list/MyScene';
+import ListViewByImge from './demo/ListViewByImae';
+import ListViewByTextView from './demo/ListViewByTextView'
+import MyScene from './demo/MyScene'
 
 class ListViewBasics extends Component {
     render() {
         return (
+            // <ListViewByTextView />
+            // <ListViewByImge />
             <Navigator
-                initialRoute={{ title: 'My Initial Scene', index: 0 }}
+                initialRoute={{title: '标题', index: 0}}
                 renderScene={(route, navigator) =>
                     <MyScene
                         title={route.title}
@@ -22,7 +26,7 @@ class ListViewBasics extends Component {
                         onForward={ () => {
                             const nextIndex = route.index + 1;
                             navigator.push({
-                                title: 'Scene ' + nextIndex,
+                                title: '第' + nextIndex + '页',
                                 index: nextIndex,
                             });
                         }}
